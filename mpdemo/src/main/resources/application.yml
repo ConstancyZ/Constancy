@@ -1,0 +1,26 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:mysql://115.159.75.168:3306/kdgts?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    #  url: jdbc:mysql://115.159.225.28:3306/kdgts?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    # username: searcher
+    password: 'GWlaqwx4Fwq$cY'
+    # password: 'Kjsw@123456'
+    #    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+# mybatis plus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com.mpdemo/dao/*Mapper.xml
+  global-config:
+    # Âß¼­É¾³ýÅäÖÃ
+    db-config:
+      # É¾³ýÇ°
+      logic-not-delete-value: 1
+      # É¾³ýºó
+      logic-delete-value: 0
